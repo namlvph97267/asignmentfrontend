@@ -1,3 +1,22 @@
-<p>
-product-list works!
-</p>
+<div class="container" style="padding: 10px;" >
+<div class="row">
+  <div ngClass="col-lg-3 col-md-3 mb-3" *ngFor="let product of products">
+	<div class="card h-100">
+		<a href="#"><img class="card-img-top" [src]="product.img" width="30" height="200" alt=""></a>
+			<div class="card-body">
+				<h4 class="card-title">
+					<a href="#">{{product.name}}</a>
+				</h4>
+				<h5>{{product.price}} $</h5>
+				<p class="card-text">{{product.desc}}
+				</p>
+				<p class="card-text"> {{product.status? "Con hang":"Het Hang"}}</p>
+			</div>
+			<div class="card-footer">
+				<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small><br>
+           <button (click)="showDetail(product.pro)">Chi tiết</button>
+			</div>
+	</div>
+</div>
+</div>
+</div>
