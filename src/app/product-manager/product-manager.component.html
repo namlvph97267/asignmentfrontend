@@ -1,0 +1,30 @@
+<div style="text-center">
+   <div class="search-product">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Tìm kiếm...">
+    </div>
+<a class="btn btn-primary" routerLink="/add-product">Thêm sản phẩm</a>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Tên sản phẩm</th>
+      <th>Giá sản phẩm</th>
+      <th>Thông tin sản phẩm</th>
+       <th>Trạng thái</th>
+      <th>Sửa</th>
+      <th>Xóa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products" >
+      <td scope="row">{{product.name}}</td>
+      <td>{{product.price}}  </td>
+      <td>{{product.desc}}</td>
+      <td>{{product.status? "Con hang":"Het Hang"}}</td>
+    
+      <td><button class="btn btn-secondary" routerLink="/editproduct/{{product.id}}">Sửa</button></td>
+      <td><button class="btn btn-primary" (click)="removeItem(product.id)">Xóa</button></td>
+      
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -10,6 +10,9 @@ import { ProductDetailComponent } from "./product-detail/product-detail.componen
 import { ProductService } from "./services/product.service";
 import { HomeComponent } from "./home/home.component";
 import { ProductComponent } from "./product/product.component";
+import { ProductManagerComponent } from './product-manager/product-manager.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductAddComponent } from './product-add/product-add.component';
 
 @NgModule({
   imports: [
@@ -24,7 +27,10 @@ import { ProductComponent } from "./product/product.component";
     ProductListComponent,
     ProductDetailComponent,
     HomeComponent,
-    ProductComponent
+    ProductComponent,
+    ProductManagerComponent,
+    ProductEditComponent,
+    ProductAddComponent
   ],
   bootstrap: [AppComponent],
   providers: [ProductService]
